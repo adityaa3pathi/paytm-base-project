@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const { number } = require("zod");
+require("dotenv").config();
 
 
- mongoose.connect("mongodb+srv://adityabietj:iUYlDzJnDC2sTYQh@cluster1.nadjswi.mongodb.net/paytm-datah");
+ mongoose.connect(process.env.DB_URL);
 
 const schema1 = new mongoose.Schema({
   firstname: {
